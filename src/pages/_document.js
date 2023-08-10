@@ -16,14 +16,14 @@ class MyDocument extends Document {
     }
 
     render() {
-        const { headerData } = this.props;
+        const { headerData={} } = this.props;
 
         return (
             <Html className='ys-design'>
                 <Head>
                 </Head>
                 <body>
-                    {JSON.stringify(headerData)}
+                    {headerData.metadata ? 'Has Header Data' : 'Fail: Missing Header Data'}
                     <Main />
                     <NextScript />
                 </body>
